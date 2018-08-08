@@ -24,6 +24,7 @@
     "node-neat": "^2.0.0-beta.0"
   },
   "dependencies": {
+    "bulma": "^0.7.1",
     "vinyl-fs": "^3.0.2"
   }
 }

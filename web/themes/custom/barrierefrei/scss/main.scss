@@ -1,0 +1,44 @@
+@charset "utf-8";
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700&Raleway:400,700');
+
+// Set your brand colors
+$orange: #FF8500;
+$white: #ffffff;
+
+// Update Bulma's global variables
+$family-sans-serif: "Open Sans", sans-serif;
+$primary: $orange;
+$link: $orange;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+@import "../node_modules/bulma/bulma.sass";
+
+body {
+}
+
+.view-user-admin-people .views-row {
+  width: 50%;
+  float: left;
+}
+.view-user-admin-people .views-row:nth-child(odd) {
+  clear: left;
+}
+
+.field--name-user-picture {
+  float: left;
+}
+
+.image.is-rounded img {
+  border-radius: 290486px;
+}
+
+.section {
+  @include clearfix;
+}

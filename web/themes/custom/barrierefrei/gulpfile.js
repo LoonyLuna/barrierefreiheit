@@ -31,7 +31,7 @@ loadConfig();
 gulp.task("default", ["sass"]);
 
 gulp.task("sass", function() {
-  gulp.src("scss/global.scss")
+  gulp.src("scss/main.scss")
     .pipe(sassGlob())
     //.pipe(sourcemaps.init())
     .pipe(sass({
@@ -45,7 +45,7 @@ gulp.task("sass", function() {
       gutil.log(error);
       this.emit('end');
     })
-    .pipe(concat('style.css'))
+    .pipe(concat('main.css'))
     .pipe(prefix("last 2 versions", "> 1%", "ie 8"))
     .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest("./css/"))

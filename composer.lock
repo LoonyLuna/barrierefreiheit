@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ebe22183d42a4fc7fe385bd1962aaf37",
+    "content-hash": "ff4f034735f52a39d1a9311ac2084bb7",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -632,6 +632,63 @@
             ],
             "description": "Modern task runner",
             "time": "2018-05-27T01:42:53+00:00"
+        },
+        {
+            "name": "consolidation/site-alias",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/consolidation/site-alias.git",
+                "reference": "c5d85519c68cc32f773b57dd58b271910975dcdf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/consolidation/site-alias/zipball/c5d85519c68cc32f773b57dd58b271910975dcdf",
+                "reference": "c5d85519c68cc32f773b57dd58b271910975dcdf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "consolidation/robo": "^1.2.3",
+                "g1a/composer-test-scenarios": "^2",
+                "knplabs/github-api": "^2.7",
+                "php-http/guzzle6-adapter": "^1.1",
+                "phpunit/phpunit": "^5",
+                "satooshi/php-coveralls": "^2",
+                "squizlabs/php_codesniffer": "^2.8",
+                "symfony/console": "^2.8|^3|^4",
+                "symfony/yaml": "~2.3|^3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Consolidation\\SiteAlias\\": "src",
+                    "Drush\\SiteAlias\\": "src/legacy"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Moshe Weitzman",
+                    "email": "weitzman@tejasa.com"
+                },
+                {
+                    "name": "Greg Anderson",
+                    "email": "greg.1.anderson@greenknowe.org"
+                }
+            ],
+            "description": "Template project for PHP libraries.",
+            "time": "2018-08-07T22:42:53+00:00"
         },
         {
             "name": "container-interop/container-interop",
@@ -1597,6 +1654,87 @@
             "time": "2018-07-27T10:07:07+00:00"
         },
         {
+            "name": "drupal/admin_toolbar",
+            "version": "1.24.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/admin_toolbar",
+                "reference": "8.x-1.24"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-8.x-1.24.zip",
+                "reference": "8.x-1.24",
+                "shasum": "682ffa443a1e339583022eb6adbb00c1103ea6d4"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.24",
+                    "datestamp": "1527523080",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Wilfrid Roze (eme)",
+                    "homepage": "https://www.drupal.org/u/eme",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Romain Jarraud (romainj)",
+                    "homepage": "https://www.drupal.org/u/romainj",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Adrian Cid Almaguer (adriancid)",
+                    "homepage": "https://www.drupal.org/u/adriancid",
+                    "email": "adriancid@gmail.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Mohamed Anis Taktak (matio89)",
+                    "homepage": "https://www.drupal.org/u/matio89",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "fethi.krout",
+                    "homepage": "https://www.drupal.org/user/3206765"
+                },
+                {
+                    "name": "matio89",
+                    "homepage": "https://www.drupal.org/user/2320090"
+                },
+                {
+                    "name": "romainj",
+                    "homepage": "https://www.drupal.org/user/370706"
+                }
+            ],
+            "description": "Provides a drop-down menu interface to the core Drupal Toolbar.",
+            "homepage": "http://drupal.org/project/admin_toolbar",
+            "keywords": [
+                "Drupal",
+                "Toolbar"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/admin_toolbar",
+                "issues": "https://www.drupal.org/project/issues/admin_toolbar"
+            }
+        },
+        {
             "name": "drupal/console",
             "version": "1.8.0",
             "source": {
@@ -2226,26 +2364,148 @@
             }
         },
         {
-            "name": "drush/drush",
-            "version": "9.3.0",
+            "name": "drupal/simplify_menu",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/drush-ops/drush.git",
-                "reference": "82e00a5437b5d2c21ee0f5b3090c3931db3cb71b"
+                "url": "https://git.drupal.org/project/simplify_menu",
+                "reference": "8.x-2.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/82e00a5437b5d2c21ee0f5b3090c3931db3cb71b",
-                "reference": "82e00a5437b5d2c21ee0f5b3090c3931db3cb71b",
+                "url": "https://ftp.drupal.org/files/projects/simplify_menu-8.x-2.0.zip",
+                "reference": "8.x-2.0",
+                "shasum": "b5a31ac58edbad07b6a49ebc70a4c2dce8e68a3f"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.0",
+                    "datestamp": "1509116285",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "edutrul",
+                    "homepage": "https://www.drupal.org/user/1621444"
+                },
+                {
+                    "name": "jmolivas",
+                    "homepage": "https://www.drupal.org/user/678770"
+                },
+                {
+                    "name": "mariohernandez",
+                    "homepage": "https://www.drupal.org/user/446544"
+                },
+                {
+                    "name": "shrop",
+                    "homepage": "https://www.drupal.org/user/14767"
+                }
+            ],
+            "description": "Adds a TwigExtension that grants access to Drupal's menu render array so it can be used within a twig template.",
+            "homepage": "https://www.drupal.org/project/simplify_menu",
+            "support": {
+                "source": "http://cgit.drupalcode.org/simplify_menu"
+            }
+        },
+        {
+            "name": "drupal/viewsreference",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/viewsreference",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/viewsreference-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "5ccceed4ebb1b55c6a459431829e7c72477171b5"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "conflict": {
+                "drupal/viewsreferennce": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1515538984",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "New Zeal",
+                    "homepage": "https://www.drupal.org/user/93571"
+                },
+                {
+                    "name": "joekers",
+                    "homepage": "https://www.drupal.org/user/2229066"
+                },
+                {
+                    "name": "seanB",
+                    "homepage": "https://www.drupal.org/user/545912"
+                }
+            ],
+            "description": "Views Reference",
+            "homepage": "http://drupal.org/project/viewsreference",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/viewsreference",
+                "issues": "http://drupal.org/project/issues/viewsreference"
+            }
+        },
+        {
+            "name": "drush/drush",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drush-ops/drush.git",
+                "reference": "f98f53be94d280b29203203f8915145136b3e79d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/f98f53be94d280b29203203f8915145136b3e79d",
+                "reference": "f98f53be94d280b29203203f8915145136b3e79d",
                 "shasum": ""
             },
             "require": {
                 "chi-teck/drupal-code-generator": "^1.24.0",
                 "composer/semver": "^1.4",
                 "consolidation/annotated-command": "^2.8.1",
-                "consolidation/config": "^1.0.9",
+                "consolidation/config": "^1.1.0",
                 "consolidation/output-formatters": "^3.1.12",
                 "consolidation/robo": "^1.1.5",
+                "consolidation/site-alias": "^1.0.1",
                 "ext-dom": "*",
                 "grasmash/yaml-expander": "^1.1.1",
                 "league/container": "~2",
@@ -2258,7 +2518,7 @@
                 "symfony/event-dispatcher": "~2.7|^3",
                 "symfony/finder": "~2.7|^3",
                 "symfony/process": "~2.7|^3",
-                "symfony/var-dumper": "~2.7|^3",
+                "symfony/var-dumper": "~2.7|^3|^4",
                 "symfony/yaml": "~2.3|^3",
                 "webflo/drupal-finder": "^1.1",
                 "webmozart/path-util": "^2.1.0"
@@ -2324,7 +2584,7 @@
             ],
             "description": "Drush is a command line shell and scripting interface for Drupal, a veritable Swiss Army knife designed to make life easier for those of us who spend some of our working hours hacking away at the command prompt.",
             "homepage": "http://www.drush.org",
-            "time": "2018-05-23T16:47:20+00:00"
+            "time": "2018-08-08T16:19:43+00:00"
         },
         {
             "name": "easyrdf/easyrdf",
@@ -4414,6 +4674,61 @@
             "time": "2018-08-06T14:22:27+00:00"
         },
         {
+            "name": "symfony/polyfill-php72",
+            "version": "v1.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php72.git",
+                "reference": "95c50420b0baed23852452a7f0c7b527303ed5ae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/95c50420b0baed23852452a7f0c7b527303ed5ae",
+                "reference": "95c50420b0baed23852452a7f0c7b527303ed5ae",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.9-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php72\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 7.2+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2018-08-06T14:22:27+00:00"
+        },
+        {
             "name": "symfony/process",
             "version": "v3.4.14",
             "source": {
@@ -4833,38 +5148,44 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v3.4.14",
+            "version": "v4.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "f62a394bd3de96f2f5e8f4c7d685035897fb3cb3"
+                "reference": "69e174f4c02ec43919380171c6f7550753299316"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/f62a394bd3de96f2f5e8f4c7d685035897fb3cb3",
-                "reference": "f62a394bd3de96f2f5e8f4c7d685035897fb3cb3",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/69e174f4c02ec43919380171c6f7550753299316",
+                "reference": "69e174f4c02ec43919380171c6f7550753299316",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.5.9|>=7.0.8",
-                "symfony/polyfill-mbstring": "~1.0"
+                "php": "^7.1.3",
+                "symfony/polyfill-mbstring": "~1.0",
+                "symfony/polyfill-php72": "~1.5"
             },
             "conflict": {
-                "phpunit/phpunit": "<4.8.35|<5.4.3,>=5.0"
+                "phpunit/phpunit": "<4.8.35|<5.4.3,>=5.0",
+                "symfony/console": "<3.4"
             },
             "require-dev": {
                 "ext-iconv": "*",
+                "symfony/process": "~3.4|~4.0",
                 "twig/twig": "~1.34|~2.4"
             },
             "suggest": {
                 "ext-iconv": "To convert non-UTF-8 strings to UTF-8 (or symfony/polyfill-iconv in case ext-iconv cannot be used).",
                 "ext-intl": "To show region name in time zone dump",
-                "ext-symfony_debug": ""
+                "symfony/console": "To use the ServerDumpCommand and/or the bin/var-dump-server script"
             },
+            "bin": [
+                "Resources/bin/var-dump-server"
+            ],
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.4-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -4898,7 +5219,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2018-07-26T11:19:56+00:00"
+            "time": "2018-07-26T11:24:31+00:00"
         },
         {
             "name": "symfony/yaml",

@@ -1,24 +1,62 @@
-<div class="layout-container">
+<header>
+  <div class="container is-widescreen">
+    {#{{ page.header }}#}
 
-  <header>
-    {{ page.header }}
-  </header>
+    <nav{{ attributes.addClass('navbar') }}>
+      <div class="navbar-brand">
+        <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="navbar-item">
+          <img src="{{ base_path ~ directory }}/logo.svg" alt="{{ 'Home'|t }}" height="28" width="128"/>
+        </a>
 
-  {{ page.breadcrumbs }}
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu">
+        <div class="navbar-start">
+          {# Get menu items #}
+          {% set items = simplify_menu('main') %}
+          {# Iterate menu tree #}
+          {% for menu_item in items.menu_tree %}
+            <a href="{{ menu_item.url }}" class="navbar-item">{{ menu_item.text }}</a>
+          {% endfor %}
+        </div>
 
-  <main role="main">
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="field is-grouped">
+              <p class="control">
+                <a class="button is-primary"
+                   href="{{ base_path }}/user/login">
+                  <span>Login</span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+<main role="main">
+  <div class="container is-widescreen">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
     <div class="layout-content">
+      {{ page.breadcrumbs }}
       {{ page.content }}
     </div>{# /.layout-content #}
+  </div>
+</main>
 
-  </main>
-
-  {% if page.footer %}
-    <footer role="contentinfo">
+{% if page.footer %}
+  <footer role="contentinfo" class="footer">
+    <div class="content has-text-centered">
       {{ page.footer }}
-    </footer>
-  {% endif %}
-
-</div>{# /.layout-container #}
+    </div>
+  </footer>
+{% endif %}
