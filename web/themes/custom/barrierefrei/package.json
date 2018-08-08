@@ -1,0 +1,29 @@
+{
+  "name": "heika",
+  "version": "1.0.0",
+  "description": "heika",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "erdfisch+",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.11",
+    "concat": "^1.0.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-notify": "^3.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-glob": "^1.0.8",
+    "gulp-sourcemaps": "^2.6.0",
+    "gutil": "^1.6.4",
+    "node-bourbon": "^4.2.8",
+    "node-neat": "^2.0.0-beta.0"
+  },
+  "dependencies": {
+    "vinyl-fs": "^3.0.2"
+  }
+}
