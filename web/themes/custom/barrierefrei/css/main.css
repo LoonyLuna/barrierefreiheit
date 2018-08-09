@@ -3221,9 +3221,9 @@ a.panel-block:hover, label.panel-block:hover { background-color: whitesmoke; }
 
 .footer { background-color: #fafafa; padding: 3rem 1.5rem 6rem; }
 
-.view-user-admin-people .views-row { width: 50%; float: left; }
+.view-people .views-row { width: 50%; float: left; }
 
-.view-user-admin-people .views-row:nth-child(odd) { clear: left; }
+.view-people .views-row:nth-child(odd) { clear: left; }
 
 .field--name-user-picture { float: left; }
 
