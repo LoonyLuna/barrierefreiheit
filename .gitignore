@@ -29,3 +29,9 @@
 
 # Ignore Drupal 8 php server script
 /web/.ht.router.php
+
+# Ignore default directory
+/web/sites/default/*
+
+#Ignore DS Store
+/web/sites/.DS_Store
