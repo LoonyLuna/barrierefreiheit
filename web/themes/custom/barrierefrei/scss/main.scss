@@ -29,6 +29,11 @@ body {
 }
 .view-people .views-row:nth-child(odd) {
   clear: left;
+  margin-bottom: 2em;
+}
+
+.media-content {
+  margin-top: 1em;
 }
 
 .field--name-user-picture {

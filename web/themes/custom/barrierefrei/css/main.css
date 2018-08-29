@@ -3223,7 +3223,9 @@ a.panel-block:hover, label.panel-block:hover { background-color: whitesmoke; }
 
 .view-people .views-row { width: 50%; float: left; }
 
-.view-people .views-row:nth-child(odd) { clear: left; }
+.view-people .views-row:nth-child(odd) { clear: left; margin-bottom: 2em; }
+
+.media-content { margin-top: 1em; }
 
 .field--name-user-picture { float: left; }
 
