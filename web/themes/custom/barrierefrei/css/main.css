@@ -3225,6 +3225,8 @@ a.panel-block:hover, label.panel-block:hover { background-color: whitesmoke; }
 
 .view-people .views-row:nth-child(odd) { clear: left; margin-bottom: 2em; }
 
+.view-articles .views-row { width: 50%; float: left; padding-right: 1em; }
+
 .media-content { margin-top: 1em; }
 
 .field--name-user-picture { float: left; }
