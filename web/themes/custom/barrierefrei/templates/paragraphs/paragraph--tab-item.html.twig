@@ -49,7 +49,10 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes).setAttribute('data-tab-item', paragraph.id.value) }}>
     {% block content %}
-      {{ content }}
+      <div aria-hidden="true">
+        {{ content.field_title }}
+      </div>
+      {{ content|without('field_title') }}
     {% endblock %}
   </div>
 {% endblock paragraph %}
