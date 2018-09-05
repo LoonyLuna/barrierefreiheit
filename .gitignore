@@ -35,3 +35,8 @@
 
 #Ignore DS Store
 /web/sites/.DS_Store
+.DS_Store
+/web/.DS_Store
+/web/themes/custom/.DS_Store
+
+/web/themes/custom/*/node_modules/*
