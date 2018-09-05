@@ -9,4 +9,5 @@ global-styling:
     - core/drupal
     - core/drupalSettings
     - core/jquery
+    - core/jquery.once
     - core/jquery.ui.accordion
