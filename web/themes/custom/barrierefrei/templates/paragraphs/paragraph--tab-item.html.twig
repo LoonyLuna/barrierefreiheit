@@ -38,29 +38,18 @@
  * @ingroup themeable
  */
 #}
-{% set classes = [
-'paragraph',
-'section',
-'paragraph--type--' ~ paragraph.bundle|clean_class,
-view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-not paragraph.isPublished() ? 'paragraph--unpublished'
-] %}
+{%
+  set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished'
+]
+%}
 {% block paragraph %}
-  <section{{ attributes.addClass(classes) }}>
+  <div{{ attributes.addClass(classes).setAttribute('data-tab-item', paragraph.id.value) }}>
     {% block content %}
-      {{ content.field_title }}
-      {% block navigation %}
-        {% set items = content.field_items['#items'] %}
-        <nav aria-hidden="true" class="paragraphs--horizontal-tabs--navigation">
-          <ul>
-            {% for item in items %}
-              {% set paragraph = item.get('entity').getTarget().getValue() %}
-              <li class="paragraphs--horizontal-tabs--navigation__item" data-tab-item-source="{{ paragraph.id.value }}">{{ paragraph.field_title.value }}</li>
-            {% endfor %}
-          </ul>
-        </nav>
-      {% endblock %}
-      {{ content|without('field_title') }}
+      {{ content }}
     {% endblock %}
-  </section>
+  </div>
 {% endblock paragraph %}

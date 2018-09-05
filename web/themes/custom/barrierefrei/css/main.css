@@ -3227,10 +3227,30 @@ a.panel-block:hover, label.panel-block:hover { background-color: whitesmoke; }
 
 .view-articles .views-row { width: 50%; float: left; padding-right: 1em; }
 
+.node--type-article h2 { font-size: 1.5em; margin-bottom: 1rem; }
+
 .media-content { margin-top: 1em; }
+
+.paragraphs--horizontal-tabs--navigation::after { clear: both; content: " "; display: table; }
+
+.paragraphs--horizontal-tabs--navigation ul { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.paragraphs--horizontal-tabs--navigation__item { border-radius: 50%; border: solid 2px black; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; width: 150px; height: 190px; text-align: center; margin: 0 2rem 2rem 0; padding: 72px 0 0; font-size: 1.5rem; }
+
+.paragraphs--horizontal-tabs--navigation__item.is-active-tab { border: solid 2px #FF8500; }
+
+.paragraph .field__items .field--name-field-title { display: none; }
 
 .field--name-user-picture { float: left; }
 
 .image.is-rounded img { border-radius: 290486px; }
 
 .section::after { clear: both; content: " "; display: table; }
+
+.footer { background-color: #FF8500; }
+
+.footer .menu { list-style: none; text-align: center; margin: 0; padding: 0; }
+
+.footer .menu a.is-active { color: #ffffff; }
+
+.footer .menu-item { display: inline-block; margin: 0 2rem; }

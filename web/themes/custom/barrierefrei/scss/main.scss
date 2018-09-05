@@ -20,25 +20,58 @@ $input-shadow: none;
 
 @import "../node_modules/bulma/bulma.sass";
 
-body {
-}
-
 .view-people .views-row {
   width: 50%;
   float: left;
 }
+
 .view-people .views-row:nth-child(odd) {
   clear: left;
   margin-bottom: 2em;
 }
+
 .view-articles .views-row {
   width: 50%;
   float: left;
   padding-right: 1em;
 }
 
+.node--type-article h2 {
+  font-size: 1.5em;
+  margin-bottom: 1rem;
+}
+
 .media-content {
   margin-top: 1em;
+}
+
+.paragraphs--horizontal-tabs--navigation {
+  @include clearfix;
+}
+
+.paragraphs--horizontal-tabs--navigation ul {
+  display: flex;
+}
+
+.paragraphs--horizontal-tabs--navigation__item {
+  border-radius: 50%;
+  border: solid 2px black;
+  flex: 1;
+  width: 150px;
+  height: 190px;
+  text-align: center;
+  margin: 0 2rem 2rem 0;
+  padding: 72px 0 0;
+  font-size: 1.5rem;
+  &.is-active-tab {
+    border: solid 2px $orange;
+  }
+}
+
+.paragraph {
+  .field__items .field--name-field-title {
+    display: none;
+  }
 }
 
 .field--name-user-picture {
@@ -51,4 +84,22 @@ body {
 
 .section {
   @include clearfix;
+}
+
+.footer {
+  background-color: $orange;
+  .menu {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    a.is-active{
+      color: $white;
+    }
+  }
+}
+
+.footer .menu-item {
+  display: inline-block;
+  margin: 0 2rem;
 }
